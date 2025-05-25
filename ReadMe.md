@@ -40,7 +40,7 @@ This repository contains the .NET 8 "Products" Web API developed for the Onyx Ca
 
 ### Configuration
 
-1.  **Clone:** `git clone https://github.com/[Your GitHub Username]/[Your Repository Name].git`
+1.  **Clone:** `git clone https://github.com/sanjaykumarporeddi/Onyx_POC_Submission.git`
 2.  **User Secrets (for `Onyx.Services.ProductAPI` project):**
     *   `ConnectionStrings:DefaultConnection`: Your PostgreSQL connection string.
     *   `ApiSettings:Secret`: A strong JWT secret (min 32 chars).
@@ -53,3 +53,10 @@ This repository contains the .NET 8 "Products" Web API developed for the Onyx Ca
 
 From the `Onyx.Services.ProductAPI` directory: 
 dotnet run
+
+### Running Tests
+From the Onyx.Services.ProductAPI.Tests directory:
+dotnet test
+
+### Architecture
+Refer to Microservices_Onyx.pptx for a Architecture diagram illustrating this service within a sample microservices event-driven architecture. The Products API publishes events to a service bus, allowing other services (e.g., Orders, Shopping Cart) to react to product changes, promoting loose coupling and scalability.
